@@ -1,0 +1,20 @@
+extends layout.pug
+
+include mixins/form.pug
+
+block append style
+  include css/register.css
+  include css/form.css
+
+block content
+  h1 Vulnerable Bank
+
+  h3 Register
+
+  if invalid
+    p.error-message Username already taken
+
+  +user-form('/register', 'Register')
+
+  p If you already have an account you can login  
+    a(href="/login") here

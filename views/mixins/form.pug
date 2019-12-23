@@ -1,0 +1,12 @@
+mixin user-form(action, buttonText)
+  form(method='POST' action= action)
+    div.form-group
+      label(for='username') Username:
+      input(type='text' name='username')
+
+    div.form-group
+      label(for='password') Password:
+      input(type='password' name='password')
+      
+    div.form-group
+      input(type='submit' value= buttonText)
