@@ -1,5 +1,5 @@
 extends layout.pug
-include mixins/form.pug
+include mixins/user-form.pug
 
 block append style
   include css/form.css
@@ -16,10 +16,3 @@ block content
 
   p If you don't have an account you can register 
     a(href="/register") here
-  
-  //- form(method='POST' action='/login')
-  //-   label(for='username') Username:
-  //-   input(type='text' name='username')
-  //-   label(for='password') Password:
-  //-   input(type='password' name='password')
-  //-   input(type='submit' value='Login')

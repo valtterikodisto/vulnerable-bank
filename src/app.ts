@@ -5,10 +5,11 @@ import cookieParser from 'cookie-parser'
 
 import loginRouter from './controllers/login'
 import registerRouter from './controllers/register'
+import homeRouter from './controllers/home'
+import userRouter from './controllers/user'
 
 import errorHandler from './middlewares/errorHandler'
 import { authenticate } from './middlewares/authentication'
-import homeRouter from './controllers/home'
 
 mongo.connect()
 
@@ -25,6 +26,7 @@ app.set('view engine', 'pug')
 app.use('/', homeRouter)
 app.use('/login', loginRouter)
 app.use('/register', registerRouter)
+app.use('/user', userRouter)
 
 app.use(errorHandler)
 

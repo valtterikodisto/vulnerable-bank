@@ -1,0 +1,26 @@
+extends layout.pug
+
+block append style
+  include css/home.css
+  include css/form.css
+
+block content
+
+  h1 Vulnerable Bank
+  h3 Hello #{username}!
+  h4 Balance: #{balance}€
+
+  if invalid
+    p Could not transfer funds
+
+  h3 Transfer money
+  form(method='POST' action='/user/transfer')
+    div.form-group
+      label(for='to') Transfer to: 
+      select(name='to')
+        each user in users
+          option(value=user._id) #{user.username}
+
+    div.form-group 
+      label(for='amount') Amount:
+      input(name='amount' type='number')

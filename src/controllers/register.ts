@@ -10,7 +10,7 @@ registerRouter.get('/', (request, response, next) => {
 })
 
 registerRouter.post('/', (request, response, next) => {
-  const user: IUser = request.body
+  const user: IUser = { ...request.body, balance: 0 }
 
   User.create(user)
     .then(savedUser => {
