@@ -55,4 +55,8 @@ npm start
 
 ### A7: Cross-Site Scripting (XSS)
 
+- Easy to XSS with username
+
 ### A10: Insufficient Logging & Monitoring
+
+- No logging for transactions which makes it easy to steal assets
