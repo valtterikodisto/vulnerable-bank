@@ -1,6 +1,7 @@
 import { Router } from 'express'
 import User, { IUser } from '../models/user'
 import url from 'url'
+import Credentials from '../types/Credentials'
 
 const loginRouter = Router()
 
@@ -10,7 +11,7 @@ loginRouter.get('/', (request, response) => {
 })
 
 loginRouter.post('/', (request, response, next) => {
-  const credentials: IUser = request.body
+  const credentials: Credentials = request.body
 
   User.findOne(credentials)
     .then(user => {

@@ -11,12 +11,34 @@ node -v # Mine is v12.14.0
 npm -v # Mine is 6.13.4
 ```
 
+#### Linux (Ubuntu)
+
 You can install node and npm with curl on Ubuntu in the following way:
 
 ```bash
 sudo apt install curl
 curl -sL https://deb.nodesource.com/setup_12.x | sudo -E bash -
 ```
+
+#### macOS
+
+With Homebrew:
+
+```bash
+brew install node
+```
+
+With bash:
+
+```bash
+curl "https://nodejs.org/dist/latest/node-${VERSION:-$(wget -qO- https://nodejs.org/dist/latest/ | sed -nE 's|._>node-(._)\.pkg</a>.\*|\1|p')}.pkg" > "$HOME/Downloads/node-latest.pkg" && sudo installer -store -pkg "$HOME/Downloads/node-latest.pkg" -target "/"
+```
+
+#### Windows
+
+Download the Windows Installer from the [nodejs.org web site](https://nodejs.org)
+
+#### Others
 
 For others [https://nodejs.org/en/download/package-manager](https://nodejs.org/en/download/package-manager)
 
