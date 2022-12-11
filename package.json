@@ -27,7 +27,7 @@
     "@types/pug": "^2.0.4",
     "body-parser": "^1.19.0",
     "cookie-parser": "^1.4.4",
-    "express": "^4.17.1",
+    "express": "^4.17.3",
     "mongoose": "^5.8.2",
     "pug": "^2.0.4"
   }
